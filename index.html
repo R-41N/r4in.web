@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R4IN</title>
+    <link rel="icon" href="https://r2.guns.lol/59a3ad90-6060-4575-98db-b2cbd68e9e76.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #121212;
+            color: #f1f1f1;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: rgba(27, 27, 27, 0.9);
+            padding: 20px 50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #f1f1f1;
+            font-weight: 600;
+            padding: 8px 15px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00b894;
+        }
+
+        .hero {
+            height: 100vh;
+            background: #0f0f0f; /* Darker background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #f1f1f1;
+            text-align: center;
+            position: relative;
+            padding: 0 20px;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        .hero h1 {
+            font-size: 6rem; /* Increased font size */
+            font-weight: 600;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #d5006d, #ff6f00); /* Updated gradient color */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: slideIn 1s ease-in-out forwards;
+        }
+
+        .about {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #222;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #00b894;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .experience {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .experience h3 {
+            font-size: 2rem;
+            color: #00b894;
+            margin-bottom: 15px;
+        }
+
+        .experience ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .experience li {
+            background: #333;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .experience li:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            padding: 30px;
+            background-color: #1b1b1b;
+            color: #f1f1f1;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" style="text-decoration: none; font-weight: 600; font-size: 1.5rem; color: #f1f1f1;">R4IN</a>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="learning.html">Learning</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>R4IN</h1>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About me</h2>
+        <p>Welcome to my website! Here there will just be things about me, what I'm learning & just me in general!</p>
+        <h3>My Experience</h3>
+        <div class="experience">
+            <h3>Roles and Experience</h3>
+            <ul>
+                <li>🔹 Management @ .gg/sfra</li>
+                <li>🔹 Co-Owner @ .gg/rra</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 R4IN. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
