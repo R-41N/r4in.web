@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R4IN</title>
+    <title>R4IN | Contact</title>
     <link rel="icon" href="https://r2.guns.lol/59a3ad90-6060-4575-98db-b2cbd68e9e76.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -14,9 +14,9 @@
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #121212;
-            color: #f1f1f1;
+            font-family: 'Poppins', 'Montserrat', sans-serif;
+            background-color: #101820;
+            color: #f5f5f5;
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -54,24 +54,22 @@
 
         .hero {
             height: 100vh;
-            background: #0f0f0f;
+            background: radial-gradient(circle, rgba(26, 26, 26, 1) 30%, rgba(16, 16, 32, 1) 100%);
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             position: relative;
             padding: 0 20px;
-            animation: fadeIn 1s ease-in-out forwards;
         }
 
         .hero h1 {
             font-size: 6rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            background: linear-gradient(90deg, #d5006d, #ff6f00);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: slideIn 1s ease-in-out forwards;
+            font-weight: 700;
+            color: #00FFD1;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            animation: fadeIn 1s ease-in-out forwards;
         }
 
         .content {
@@ -80,7 +78,7 @@
             padding: 40px;
             background-color: #222;
             border-radius: 15px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
             text-align: center;
             animation: fadeIn 1s ease-in-out forwards;
         }
@@ -89,6 +87,7 @@
             font-size: 2.5rem;
             margin-bottom: 20px;
             color: #00b894;
+            text-transform: uppercase;
         }
 
         .form-group {
@@ -132,7 +131,7 @@
         }
 
         .success-message {
-            display: none; /* Initially hidden */
+            display: none;
             background-color: #00b894;
             color: #fff;
             padding: 15px;
@@ -141,31 +140,21 @@
         }
 
         footer {
-            padding: 30px;
-            background-color: #1b1b1b;
-            color: #f1f1f1;
+            padding: 40px 20px;
+            background-color: #181818;
+            color: #BBB;
             text-align: center;
         }
 
         footer p {
             margin: 0;
+            font-size: 1rem;
         }
 
         @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
             }
             to {
                 opacity: 1;
@@ -210,22 +199,22 @@
             </div>
             <button type="submit" class="btn-submit">Send Message</button>
         </form>
-        <div id="successMessage" class="success-message">Message sent successfully!</div> <!-- Success message div -->
+        <div id="successMessage" class="success-message">Message sent successfully!</div>
     </section>
 
     <footer>
-        <p>© 2024 R4IN. All rights reserved. | Email: <a href="mailto:contact@r4in.me" style="color: #00b894;">contact@r4in.me</a></p>
+        <p>© 2024 R4IN. All rights reserved.</p>
+        <p> Email: contact@r4in.me </p>
     </footer>
 
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
+            event.preventDefault();
 
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
 
-            // Send data to Formspree
             fetch('https://formspree.io/f/xkgnwkvw', {
                 method: 'POST',
                 headers: {
@@ -236,7 +225,6 @@
             })
             .then(response => {
                 if (response.ok) {
-                    // Send data to Discord webhook
                     return fetch('https://discord.com/api/webhooks/1293205372265431142/GxG9V0mOta9lC1svC8ZSHxHfXuABviuB5qY7yvS_rv-P5DeDSNSGr-GhcEYdhVerj-Dg', {
                         method: 'POST',
                         headers: {
@@ -252,7 +240,7 @@
             })
             .then(response => {
                 if (response.ok) {
-                    document.getElementById('successMessage').style.display = 'block'; // Show success message
+                    document.getElementById('successMessage').style.display = 'block';
                     document.getElementById('contactForm').reset();
                 } else {
                     throw new Error('Discord webhook submission failed.');
