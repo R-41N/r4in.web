@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R4IN</title>
+    <title>R4IN | Learning</title>
     <link rel="icon" href="https://r2.guns.lol/59a3ad90-6060-4575-98db-b2cbd68e9e76.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -14,10 +14,10 @@
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #121212;
-            color: #f1f1f1;
-            line-height: 1.6;
+            font-family: 'Poppins', 'Montserrat', sans-serif;
+            background-color: #101820;
+            color: #f5f5f5;
+            line-height: 1.8;
             overflow-x: hidden;
         }
 
@@ -27,11 +27,11 @@
             position: fixed;
             width: 100%;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
         }
 
         nav ul {
@@ -54,24 +54,26 @@
 
         .hero {
             height: 100vh;
-            background: #0f0f0f;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
+            background: radial-gradient(circle, rgba(26, 26, 26, 1) 30%, rgba(16, 16, 32, 1) 100%);
             position: relative;
-            padding: 0 20px;
-            animation: fadeIn 1s ease-in-out forwards;
+            text-align: center;
         }
 
         .hero h1 {
-            font-size: 6rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            background: linear-gradient(90deg, #d5006d, #ff6f00);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: slideIn 1s ease-in-out forwards;
+            font-size: 7rem;
+            font-weight: 700;
+            color: #00FFD1;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .hero h1:hover {
+            transform: rotate(2deg);
         }
 
         .content {
@@ -80,53 +82,63 @@
             padding: 40px;
             background-color: #222;
             border-radius: 15px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
             text-align: center;
-            animation: fadeIn 1s ease-in-out forwards;
         }
 
         .content h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 20px;
             color: #00b894;
+            text-transform: uppercase;
         }
 
-        .content p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
+        .content-line {
+            width: 60px;
+            height: 3px;
+            background-color: #00FFD1;
+            margin: 20px auto;
+        }
+
+        .about-box {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .card {
+            flex: 1;
+            background-color: #444;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 0 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card h3 {
+            color: #00b894;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #f5f5f5;
         }
 
         footer {
-            padding: 30px;
-            background-color: #1b1b1b;
-            color: #f1f1f1;
+            padding: 40px 20px;
+            background-color: #181818;
+            color: #BBB;
             text-align: center;
         }
 
         footer p {
             margin: 0;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -137,25 +149,48 @@
         <nav>
             <ul>
                 <li><a href="index.html">About</a></li>
-                <li><a href="#learning">Learning</a></li>
+                <li><a href="learning.html">Learning</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <div>
-            <h1>Learning</h1>
+        <h1>Learning</h1>
+    </section>
+
+    <section class="content">
+        <h2>Coding Languages</h2>
+        <div class="content-line"></div>
+        <div class="about-box">
+            <div class="card">
+                <h3>JavaScript</h3>
+                <p>Currently learning Javascript for experience, have done things such as web animations for things like this website.</p>
+            </div>
+            <div class="card">
+                <h3>Python</h3>
+                <p>Have been learning python for over a year, have been able to create things such as games and mini websites.</p>
+            </div>
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>Started learning HTML around 1-2 years ago, been able to make many websits like this one.</p>
+            </div>
         </div>
     </section>
 
     <section class="content">
-        <h2> Coding languages i'm Learning/know</h2>
-        <ul>
-            <li>🔹 JavaScript</li>
-            <li>🔹 Python</li>
-            <li>🔹 Web Development</li>
-        </ul>
+        <h2>Goals</h2>
+        <div class="content-line"></div>
+        <div class="about-box">
+            <div class="card">
+                <h3>Build a quiz game</h3>
+                <p>Build an interactive quiz game using JavaScript which includes rewards and more.</p>
+            </div>
+            <div class="card">
+                <h3>Build a Portfolio</h3>
+                <p>Create a Portfolio website about things like me, real life skils and more</p>
+            </div>
+        </div>
     </section>
 
     <footer>
